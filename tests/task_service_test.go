@@ -15,7 +15,7 @@ import (
 func createTestTaskService(t *testing.T) *services.TaskService {
 	t.Helper()
 
-	dsn := "host=localhost user=postgres password=PelmeniTop47 dbname=taskmanager_test port=5432 sslmode=disable"
+	dsn := "host=localhost user=postgres password=postgres dbname=taskmanager_test port=5432 sslmode=disable"
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
