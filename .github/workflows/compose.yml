@@ -52,6 +52,8 @@ jobs:
       - name: Extract metadata (tags, labels)
         id: meta
         uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/task-manager
 
       # 8. сборка и push образа
       - name: Build and push Docker Image
